@@ -21,4 +21,3 @@ pub enum Token {
     #[regex(r"[ \t\n\f]+", logos::skip)]
     Error,
 }
-
