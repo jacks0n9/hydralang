@@ -1,4 +1,4 @@
-gThe template for all the headers of the files.
+The template for all the headers of the files.
 
 Makefile : 
 
