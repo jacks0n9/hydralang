@@ -6,7 +6,7 @@ pub enum Token {
     #[token("(")]
     LeftParen,
 
-   #[token(")")]
+    #[token(")")]
     RightParen,
 
     #[token("{")]
@@ -25,13 +25,13 @@ pub enum Token {
     #[regex("[1-9]+")]
     Int,
 
-    #[token("true")] 
+    #[token("true")]
     #[token("false")]
-    Boolean, 
-// 
-//     #[regex("[0.0-9.9]+")]
-//     Float,
-// 
+    Boolean,
+    //
+    //     #[regex("[0.0-9.9]+")]
+    //     Float,
+    //
     // Logos requires one token variant to handle errors,
     // it can be named anything you wish.
     #[error]
@@ -39,6 +39,5 @@ pub enum Token {
     // or any other matches we wish to skip.
     #[regex(r"[ \t\n\f]+", logos::skip)]
     Error,
-
     // #[regex]
 }
