@@ -2,19 +2,32 @@ use logos::{Lexer, Logos, Span};
 
 #[derive(Logos, Debug, PartialEq)]
 pub enum Token {
-    // Tokens can be literal strings, of any length.
-    #[token("fast")]
-    Fast,
+    // Brackets
+    #[token("(")]
+    LeftParen,
+
+   #[token(")")]
+    RightParen,
+
+    #[token("{")]
+    LeftCurly,
+
+    #[token("}")]
+    RightCurly,
 
     #[token(".")]
     Period,
 
-    // Or regular expressions.
+    // Data types
     #[regex("[a-zA-Z]+")]
-    String,
+    Str,
 
     #[regex("[1-9]+")]
     Int,
+
+    #[token("true")] 
+    #[token("false")]
+    Boolean, 
 // 
 //     #[regex("[0.0-9.9]+")]
 //     Float,
@@ -26,4 +39,6 @@ pub enum Token {
     // or any other matches we wish to skip.
     #[regex(r"[ \t\n\f]+", logos::skip)]
     Error,
+
+    // #[regex]
 }
