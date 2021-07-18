@@ -11,8 +11,14 @@ pub enum Token {
 
     // Or regular expressions.
     #[regex("[a-zA-Z]+")]
-    Text,
+    String,
 
+    #[regex("[1-9]+")]
+    Int,
+// 
+//     #[regex("[0.0-9.9]+")]
+//     Float,
+// 
     // Logos requires one token variant to handle errors,
     // it can be named anything you wish.
     #[error]
