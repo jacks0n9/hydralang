@@ -1,3 +1,15 @@
+//===----------------- run.rs - A file to accept the file name and run the .hy file--===//
+//
+// This source file is part of the hydralang open souce project
+//
+// Copyright (c) 2021 KittyBorgX and the englang project authors
+// Licensed under Apache License v2.0 with Runtime Library Exception
+//
+// See https://github.com/KittyBorgX/hydralang/blob/main/LICENSE for license information
+// See https://github.com/KittyBorgX/hydralang/blob/main/CONTRIBUTORS.md for the list of hydralang project authors
+//
+//===-----------------------------------------------------------------------------===//
+
 mod lexer;
 pub mod run {
     use super::lexer::Token;
@@ -30,7 +42,5 @@ pub mod run {
         for token in Token::lexer(&contents) {
             dbg!(token);
         }
-
-            }
-
+    }
 }
