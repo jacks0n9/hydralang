@@ -26,7 +26,8 @@ pub enum Token {
 
     #[token("}")]
     RightCurly,
-
+    #[token("\"")]
+    Quote,
     // Data types
     #[regex("[a-zA-Z]+")]
     Str,
