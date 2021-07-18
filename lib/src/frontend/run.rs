@@ -16,9 +16,18 @@ pub mod run {
             }, 
             
             1 => {
-                
+               
+
+        println!("{}", &args.len());
+        let help = "To run a file use cargo run filename.hy";
+
+        if &args.len() < &2 {
+            println!("{}", help);
+            std::process::exit(1);
+        }
+
         // The filename will be the second element
-        let filename = &args[1];
+        let filename = &args.get(1).unwrap();
         
         // Opens the file, panics if an error is returned
         let mut file = File::open(&filename.trim()).expect("No file found with that name");
@@ -33,10 +42,6 @@ pub mod run {
 
             }
 
-            _ => {
-            // show a help message
-                println!("Welp");
-            }
         }
 
     }
