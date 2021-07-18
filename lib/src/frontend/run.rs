@@ -22,7 +22,7 @@ pub mod run {
 
         // Opens the file, panics if an error is returned
         let mut file = File::open(&filename.trim()).expect("No file found with that name");
-        let mt contents = String::new();
+        let mut contents = String::new();
 
         // Read the contents of the file and assign contents to it
         file.read_to_string(&mut contents).unwrap();
@@ -33,4 +33,4 @@ pub mod run {
 
             }
 
-    }
+}
