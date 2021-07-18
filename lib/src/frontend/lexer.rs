@@ -15,9 +15,6 @@ pub enum Token {
     #[token("}")]
     RightCurly,
 
-    #[token(".")]
-    Period,
-
     // Data types
     #[regex("[a-zA-Z]+")]
     Str,
@@ -28,7 +25,12 @@ pub enum Token {
     #[token("true")]
     #[token("false")]
     Boolean,
+
+    // comments
     //
+    //     #[regex("/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+/")]
+    //     Comment,
+    //     //
     //     #[regex("[0.0-9.9]+")]
     //     Float,
     //
